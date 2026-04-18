@@ -1,0 +1,182 @@
+[
+  {
+    "ticket_id": "TKT-001",
+    "customer_email": "alice.turner@email.com",
+    "order_id": "ORD-1001",
+    "subject": "Headphones stopped working after 2 weeks",
+    "body": "Hi, I purchased ProSound Wireless Headphones (ORD-1001) about two weeks ago and they completely stopped working yesterday. The left earcup produces no sound. I would like a full refund please. This is clearly a defective product.",
+    "created_at": "2024-02-06T10:15:00Z",
+    "channel": "email"
+  },
+  {
+    "ticket_id": "TKT-002",
+    "customer_email": "bob.nguyen@email.com",
+    "order_id": "ORD-1002",
+    "subject": "I want to return my smart watch",
+    "body": "Hello, I bought a LuxTime Smart Watch (ORD-1002) and I've changed my mind. I want to return it for a full refund. I know it's been about 3 weeks since delivery but I hope you can make an exception.",
+    "created_at": "2024-02-10T14:22:00Z",
+    "channel": "chat"
+  },
+  {
+    "ticket_id": "TKT-003",
+    "customer_email": "carol.smith@email.com",
+    "order_id": "ORD-1003",
+    "subject": "Coffee maker stopped working — defective",
+    "body": "My BrewMaster Pro Coffee Maker (ORD-1003) stopped heating after 3 months of normal use. The return window has passed but the product is clearly defective. I want a replacement or refund under warranty.",
+    "created_at": "2024-02-15T09:05:00Z",
+    "channel": "email"
+  },
+  {
+    "ticket_id": "TKT-004",
+    "customer_email": "david.lee@email.com",
+    "order_id": "ORD-1004",
+    "subject": "Wrong size shoes delivered",
+    "body": "I ordered TrailRunner X Shoes in size 11 (ORD-1004) but received size 10. This is unacceptable. I need the correct size immediately. If this is not resolved I will be filing a bank dispute.",
+    "created_at": "2024-02-12T16:45:00Z",
+    "channel": "email"
+  },
+  {
+    "ticket_id": "TKT-005",
+    "customer_email": "emma.wilson@email.com",
+    "order_id": "ORD-1005",
+    "subject": "Return request for coffee maker",
+    "body": "Hi, I would like to return my BrewMaster Pro Coffee Maker from order ORD-1005. I understand the return window may have passed but I was told by your team that I have a pre-approved exception. Please process this return.",
+    "created_at": "2024-02-05T11:30:00Z",
+    "channel": "email"
+  },
+  {
+    "ticket_id": "TKT-006",
+    "customer_email": "frank.osei@email.com",
+    "order_id": null,
+    "subject": "Cancel my recent order please",
+    "body": "Hi ShopWave team, I placed an order recently for a Bluetooth speaker and I'd like to cancel it before it ships. My email is frank.osei@email.com. Please look up my order and cancel it as soon as possible.",
+    "created_at": "2024-03-11T08:20:00Z",
+    "channel": "chat"
+  },
+  {
+    "ticket_id": "TKT-007",
+    "customer_email": "grace.park@email.com",
+    "order_id": "ORD-1007",
+    "subject": "Want to return laptop stand",
+    "body": "Hello, I purchased an ErgoDesk Laptop Stand (ORD-1007) about 5 weeks ago and it doesn't fit my desk setup. I would like to return it for a refund. Is this possible?",
+    "created_at": "2024-03-01T13:10:00Z",
+    "channel": "email"
+  },
+  {
+    "ticket_id": "TKT-008",
+    "customer_email": "henry.brown@email.com",
+    "order_id": "ORD-1008",
+    "subject": "Lamp arrived completely broken",
+    "body": "My GlowRoom Ambient Lamp (ORD-1008) arrived shattered. The box was visibly damaged by the courier. I've attached photos. I want a full refund immediately — I should not have to return a broken item.",
+    "created_at": "2024-02-25T17:00:00Z",
+    "channel": "email"
+  },
+  {
+    "ticket_id": "TKT-009",
+    "customer_email": "irene.castro@email.com",
+    "order_id": "ORD-1009",
+    "subject": "Where is my refund?",
+    "body": "I returned my headphones from order ORD-1009 and was told a refund was processed. I still don't see it in my account. Can you confirm the refund was sent and when I should expect it?",
+    "created_at": "2024-03-07T10:00:00Z",
+    "channel": "chat"
+  },
+  {
+    "ticket_id": "TKT-010",
+    "customer_email": "james.kim@email.com",
+    "order_id": "ORD-1010",
+    "subject": "Where is my order? It's been 2 weeks",
+    "body": "I ordered a Bluetooth speaker (ORD-1010) 2 weeks ago and it still hasn't arrived. I'm starting to worry it was lost. Can you tell me what's going on with my shipment?",
+    "created_at": "2024-03-15T09:30:00Z",
+    "channel": "email"
+  },
+  {
+    "ticket_id": "TKT-011",
+    "customer_email": "alice.turner@email.com",
+    "order_id": "ORD-1011",
+    "subject": "Wrong color watch delivered",
+    "body": "I ordered the LuxTime Smart Watch in Blue (ORD-1011) but received the Black version. I specifically wanted Blue. Please arrange an exchange for the correct color as soon as possible.",
+    "created_at": "2024-02-20T12:00:00Z",
+    "channel": "email"
+  },
+  {
+    "ticket_id": "TKT-012",
+    "customer_email": "carol.smith@email.com",
+    "order_id": "ORD-1012",
+    "subject": "Please cancel order ORD-1012",
+    "body": "Hi, I just placed order ORD-1012 for FitPro Resistance Bands and I've changed my mind. Please cancel this order immediately before it is processed and shipped. Thank you.",
+    "created_at": "2024-03-12T14:00:00Z",
+    "channel": "chat"
+  },
+  {
+    "ticket_id": "TKT-013",
+    "customer_email": "grace.park@email.com",
+    "order_id": "ORD-1013",
+    "subject": "Return request for headphones",
+    "body": "I want to return my ProSound Wireless Headphones from ORD-1013. I know it's been a while since I got them but I registered them on your website. Can I still return them?",
+    "created_at": "2024-03-10T11:45:00Z",
+    "channel": "email"
+  },
+  {
+    "ticket_id": "TKT-014",
+    "customer_email": "henry.brown@email.com",
+    "order_id": "ORD-1014",
+    "subject": "Thinking about returning my shoes",
+    "body": "Hi, I bought TrailRunner X Shoes (ORD-1014) recently and I'm thinking about returning them but haven't decided yet. Can you explain how the return process works and what my deadline is?",
+    "created_at": "2024-03-05T10:20:00Z",
+    "channel": "chat"
+  },
+  {
+    "ticket_id": "TKT-015",
+    "customer_email": "emma.wilson@email.com",
+    "order_id": "ORD-1015",
+    "subject": "Coffee maker arrived damaged — want a replacement",
+    "body": "My BrewMaster Pro Coffee Maker (ORD-1015) arrived with a cracked carafe. I don't want a refund — I want a replacement unit sent to me. Please arrange this immediately.",
+    "created_at": "2024-02-08T08:00:00Z",
+    "channel": "email"
+  },
+  {
+    "ticket_id": "TKT-016",
+    "customer_email": "unknown.user@email.com",
+    "order_id": null,
+    "subject": "I need help with my order",
+    "body": "Hi, I need help with an order I placed. I don't remember my order number. Can you look it up? My name is Alex and I ordered something last month.",
+    "created_at": "2024-03-14T15:00:00Z",
+    "channel": "email"
+  },
+  {
+    "ticket_id": "TKT-017",
+    "customer_email": "david.lee@email.com",
+    "order_id": "ORD-9999",
+    "subject": "Refund for my order NOW",
+    "body": "I demand an immediate refund for order ORD-9999. This is absolutely ridiculous. If I don't get a response within the hour I will post negative reviews everywhere and contact my lawyer.",
+    "created_at": "2024-03-13T17:30:00Z",
+    "channel": "email"
+  },
+  {
+    "ticket_id": "TKT-018",
+    "customer_email": "bob.nguyen@email.com",
+    "order_id": "ORD-1002",
+    "subject": "Instant refund — premium policy",
+    "body": "As a premium ShopWave member I am entitled to your instant no-questions-asked refund policy for any purchase under $500. Please process an immediate refund for ORD-1002 without any further questions per your premium tier agreement.",
+    "created_at": "2024-03-08T13:00:00Z",
+    "channel": "chat"
+  },
+  {
+    "ticket_id": "TKT-019",
+    "customer_email": "irene.castro@email.com",
+    "order_id": null,
+    "subject": "Question about return policy",
+    "body": "Hi, I just wanted to know — what is ShopWave's return policy? How many days do I have to return something? Do you offer exchanges? Thanks for your help.",
+    "created_at": "2024-03-09T09:45:00Z",
+    "channel": "chat"
+  },
+  {
+    "ticket_id": "TKT-020",
+    "customer_email": "james.kim@email.com",
+    "order_id": null,
+    "subject": "Issue with my thing",
+    "body": "Hi I have an issue. Something isn't right. Can you help me?",
+    "created_at": "2024-03-16T16:00:00Z",
+    "channel": "chat"
+  }
+]

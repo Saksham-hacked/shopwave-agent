@@ -1,0 +1,82 @@
+[
+  {
+    "product_id": "P001",
+    "name": "ProSound Wireless Headphones",
+    "category": "electronics",
+    "price": 129.99,
+    "warranty_months": 12,
+    "return_window_days": 15,
+    "returnable": true,
+    "notes": "High-value electronics — 15-day return window applies."
+  },
+  {
+    "product_id": "P002",
+    "name": "LuxTime Smart Watch",
+    "category": "electronics",
+    "price": 249.99,
+    "warranty_months": 12,
+    "return_window_days": 15,
+    "returnable": true,
+    "notes": "High-value electronics — 15-day return window applies."
+  },
+  {
+    "product_id": "P003",
+    "name": "BrewMaster Pro Coffee Maker",
+    "category": "home_appliances",
+    "price": 89.99,
+    "warranty_months": 14,
+    "return_window_days": 30,
+    "returnable": true,
+    "notes": "Standard 30-day return. 14-month warranty."
+  },
+  {
+    "product_id": "P004",
+    "name": "TrailRunner X Shoes",
+    "category": "footwear",
+    "price": 74.99,
+    "warranty_months": 6,
+    "return_window_days": 30,
+    "returnable": true,
+    "notes": "Standard 30-day return. Exchange available for size/color issues."
+  },
+  {
+    "product_id": "P005",
+    "name": "UltraSound Bluetooth Speaker",
+    "category": "electronics",
+    "price": 199.99,
+    "warranty_months": 12,
+    "return_window_days": 15,
+    "returnable": false,
+    "notes": "Non-returnable if opened and registered online. 15-day window otherwise."
+  },
+  {
+    "product_id": "P006",
+    "name": "ErgoDesk Laptop Stand",
+    "category": "electronics_accessories",
+    "price": 34.99,
+    "warranty_months": 0,
+    "return_window_days": 60,
+    "returnable": true,
+    "notes": "Accessories category — extended 60-day return window."
+  },
+  {
+    "product_id": "P007",
+    "name": "GlowRoom Ambient Lamp",
+    "category": "home",
+    "price": 59.99,
+    "warranty_months": 6,
+    "return_window_days": 30,
+    "returnable": true,
+    "notes": "Standard 30-day return. Full refund for damage on arrival."
+  },
+  {
+    "product_id": "P008",
+    "name": "FitPro Resistance Bands",
+    "category": "sports",
+    "price": 24.99,
+    "warranty_months": 3,
+    "return_window_days": 30,
+    "returnable": true,
+    "notes": "Standard 30-day return. Sports equipment."
+  }
+]

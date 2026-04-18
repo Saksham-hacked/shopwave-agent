@@ -1,0 +1,122 @@
+[
+  {
+    "customer_id": "C001",
+    "name": "Alice Turner",
+    "email": "alice.turner@email.com",
+    "phone": "+1-555-0101",
+    "tier": "vip",
+    "member_since": "2020-03-15",
+    "total_orders": 47,
+    "total_spent": 6820.50,
+    "address": "12 Maple St, Boston, MA 02101",
+    "notes": "VIP customer. Pre-approved for one-time return exception on any order. Handle with priority."
+  },
+  {
+    "customer_id": "C002",
+    "name": "Bob Nguyen",
+    "email": "bob.nguyen@email.com",
+    "phone": "+1-555-0102",
+    "tier": "standard",
+    "member_since": "2022-07-20",
+    "total_orders": 8,
+    "total_spent": 412.30,
+    "address": "88 Oak Ave, Denver, CO 80201",
+    "notes": "Standard customer. No special exceptions."
+  },
+  {
+    "customer_id": "C003",
+    "name": "Carol Smith",
+    "email": "carol.smith@email.com",
+    "phone": "+1-555-0103",
+    "tier": "premium",
+    "member_since": "2021-01-10",
+    "total_orders": 22,
+    "total_spent": 2140.00,
+    "address": "5 Birch Rd, Seattle, WA 98101",
+    "notes": "Premium customer. Has active warranty on coffee maker."
+  },
+  {
+    "customer_id": "C004",
+    "name": "David Lee",
+    "email": "david.lee@email.com",
+    "phone": "+1-555-0104",
+    "tier": "standard",
+    "member_since": "2023-02-28",
+    "total_orders": 5,
+    "total_spent": 278.90,
+    "address": "33 Pine Ln, Austin, TX 73301",
+    "notes": "Has mentioned bank dispute in prior contact. Monitor for escalation."
+  },
+  {
+    "customer_id": "C005",
+    "name": "Emma Wilson",
+    "email": "emma.wilson@email.com",
+    "phone": "+1-555-0105",
+    "tier": "vip",
+    "member_since": "2019-11-05",
+    "total_orders": 63,
+    "total_spent": 9310.75,
+    "address": "7 Cedar Blvd, Chicago, IL 60601",
+    "notes": "VIP customer. Pre-approved for return exception on ORD-1005."
+  },
+  {
+    "customer_id": "C006",
+    "name": "Frank Osei",
+    "email": "frank.osei@email.com",
+    "phone": "+1-555-0106",
+    "tier": "premium",
+    "member_since": "2021-06-14",
+    "total_orders": 18,
+    "total_spent": 1560.20,
+    "address": "21 Elm St, Miami, FL 33101",
+    "notes": "Premium customer."
+  },
+  {
+    "customer_id": "C007",
+    "name": "Grace Park",
+    "email": "grace.park@email.com",
+    "phone": "+1-555-0107",
+    "tier": "standard",
+    "member_since": "2022-09-01",
+    "total_orders": 11,
+    "total_spent": 634.40,
+    "address": "9 Walnut Dr, Portland, OR 97201",
+    "notes": ""
+  },
+  {
+    "customer_id": "C008",
+    "name": "Henry Brown",
+    "email": "henry.brown@email.com",
+    "phone": "+1-555-0108",
+    "tier": "premium",
+    "member_since": "2020-08-22",
+    "total_orders": 29,
+    "total_spent": 3450.60,
+    "address": "14 Spruce Way, Nashville, TN 37201",
+    "notes": "Premium customer. Has filed damage claim before — verify carefully."
+  },
+  {
+    "customer_id": "C009",
+    "name": "Irene Castro",
+    "email": "irene.castro@email.com",
+    "phone": "+1-555-0109",
+    "tier": "standard",
+    "member_since": "2023-05-17",
+    "total_orders": 4,
+    "total_spent": 189.95,
+    "address": "60 Aspen Ct, Phoenix, AZ 85001",
+    "notes": ""
+  },
+  {
+    "customer_id": "C010",
+    "name": "James Kim",
+    "email": "james.kim@email.com",
+    "phone": "+1-555-0110",
+    "tier": "standard",
+    "member_since": "2022-12-03",
+    "total_orders": 7,
+    "total_spent": 521.10,
+    "address": "3 Redwood Pl, San Jose, CA 95101",
+    "notes": ""
+  }
+]
