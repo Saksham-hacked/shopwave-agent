@@ -1,0 +1,84 @@
+flowchart TD
+    %% ── Entry ──────────────────────────────────────────────────────────────
+    TICKET(["🎫 Ticket Input\n(ticket_id, customer_email,\nsubject, body, order_id)"])
+
+    %% ── LangGraph Nodes ─────────────────────────────────────────────────────
+    N1["[1] classify_and_triage\n─────────────────────\n• search_knowledge_base\n• Gemini: classify category + urgency\n• Sets confidence score\n• Detects social_engineering"]
+
+    N2["[2] fetch_context\n─────────────────────\n• get_customer (async)\n• get_order (async)\n• get_product\n• Adjusts confidence if\n  data missing"]
+
+    N3["[3] tool_execution  ⟳ ReAct Loop\n─────────────────────\n• Gemini plans tool call sequence\n• Safe tools only: get_*, search_kb,\n  check_refund_eligibility, cancel_order\n• Action tools blocked → deferred\n• Fault injection + retry (×3)"]
+
+    N4["[4] decide_resolution\n─────────────────────\n• Hard rule overrides first:\n  social_engineering → escalate URGENT\n  warranty_claim → escalate\n  confidence < 0.6 → escalate\n  amount > $200 → escalate\n  no customer → clarify\n  ambiguous+no order → clarify\n• Gemini final decision if no override"]
+
+    N5["[5] execute_resolution\n─────────────────────\n• resolved → issue_refund (if eligible)\n             + send_reply\n• escalated → escalate() + send_reply\n• clarify → send_reply"]
+
+    N6["[6] audit_logger\n─────────────────────\n• Builds full audit_entry\n• Confidence trace, tool calls,\n  reasoning steps, policy flags\n• Written → audit_log.json"]
+
+    END_NODE(["✅ END"])
+
+    %% ── Data Store ──────────────────────────────────────────────────────────
+    DB[("📦 Data Layer\n─────────────\ncustomers.json  10 records\norders.json     15 records\nproducts.json    8 records\nknowledge_base.md\ntickets.json    20 tickets")]
+
+    AUDIT[("📄 audit_log.json")]
+
+    %% ── Concurrency wrapper ─────────────────────────────────────────────────
+    CONC["🔄 Concurrency Layer\nasyncio.gather × 20 tickets\nSemaphore(5) max concurrent"]
+
+    %% ── FastAPI layer ───────────────────────────────────────────────────────
+    API["🌐 FastAPI  /  uvicorn\n─────────────────────────────────\nPOST /tickets/process\nPOST /tickets/batch\nGET  /audit-log\nGET  /tickets/{id}/status\nGET  /health"]
+
+    %% ── LLM ─────────────────────────────────────────────────────────────────
+    LLM(["🤖 Google Gemini 2.5 Flash\ngemini-2.5-flash\ntemp=0.1  JSON-only output\nretry on malformed response"])
+
+    %% ── Tool palette ────────────────────────────────────────────────────────
+    TOOLS["🛠 Tool Palette  (9 async tools)\n────────────────────────────────\nget_customer · get_order · get_product\nsearch_knowledge_base\ncheck_refund_eligibility\nissue_refund · send_reply\nescalate · cancel_order"]
+
+    %% ── Fault injection ─────────────────────────────────────────────────────
+    FAULT["⚡ Fault Injection\ncall_with_retry\nmax 3 attempts\nexponential backoff\n0.3 → 0.6 → 1.2 s"]
+
+    %% ── Main flow ───────────────────────────────────────────────────────────
+    TICKET --> CONC
+    CONC --> N1
+    API -->|"single ticket\nor batch"| CONC
+
+    %% ── Conditional routing after classify ──────────────────────────────────
+    N1 -->|"category = social_engineering\n⚠ skip all tools"| N4
+    N1 -->|"all other categories"| N2
+
+    %% ── Linear path ─────────────────────────────────────────────────────────
+    N2 --> N3
+    N3 --> N4
+
+    %% ── Resolution routing ──────────────────────────────────────────────────
+    N4 -->|"resolved / escalated / clarify"| N5
+    N5 --> N6
+    N6 --> END_NODE
+
+    %% ── External connections ────────────────────────────────────────────────
+    N1 <-->|"classify + KB search"| LLM
+    N3 <-->|"plan tool sequence"| LLM
+    N4 <-->|"final decision"| LLM
+
+    N2 <--> DB
+    N3 <--> TOOLS
+    TOOLS <--> FAULT
+    FAULT <--> DB
+    N6 --> AUDIT
+
+    %% ── Resolution outcomes (annotation) ───────────────────────────────────
+    RES_BOX["📊 Resolution Outcomes\n────────────────────\n✓ resolved\n↑ escalated\n? clarify\n✗ failed  (dead-letter)"]
+    N5 --- RES_BOX
+
+    %% ── Styles ───────────────────────────────────────────────────────────────
+    classDef node fill:#1e293b,stroke:#6366f1,stroke-width:2px,color:#f1f5f9
+    classDef external fill:#0f172a,stroke:#22d3ee,stroke-width:2px,color:#f1f5f9
+    classDef store fill:#0f172a,stroke:#f59e0b,stroke-width:2px,color:#fbbf24
+    classDef entry fill:#052e16,stroke:#22c55e,stroke-width:2px,color:#86efac
+    classDef info fill:#1e1b4b,stroke:#818cf8,stroke-width:1px,color:#c7d2fe
+
+    class N1,N2,N3,N4,N5,N6 node
+    class LLM,API,TOOLS,FAULT external
+    class DB,AUDIT store
+    class TICKET,CONC,END_NODE entry
+    class RES_BOX info

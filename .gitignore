@@ -99,6 +99,14 @@ logs/
 *.db-journal
 
 # =========================
+# ShopWave Agent Specific
+# =========================
+audit_log.json
+shopwaveenv/
+shopwave_agent.log
+architecture.png
+
+# =========================
 # Agentic AI / LLM Project Specific
 # =========================
 

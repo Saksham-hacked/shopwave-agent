@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: shopwave-agent
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api.server:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false          # set manually in Render dashboard — never commit this
+      - key: INJECT_FAULTS
+        value: "false"       # disable fault injection in production
+      - key: LOG_LEVEL
+        value: INFO
+      - key: MAX_CONCURRENT_TICKETS
+        value: "5"
+      - key: MAX_TOOL_RETRIES
+        value: "3"
+    healthCheckPath: /health
+    autoDeploy: true
