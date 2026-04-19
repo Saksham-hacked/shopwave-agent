@@ -69,12 +69,12 @@ shopwave-agent/
 
 ## Setup & Installation
 
-See [`setup.md`](./setup.md) for full step-by-step instructions.
+visit https://shopwave-agent.vercel.app/
 
 **Quick start:**
 
 ```bash
-git clone https://github.com/yourusername/shopwave-agent
+git clone https://github.com/Saksham-hacked/shopwave-agent
 cd shopwave-agent
 pip install -r requirements.txt
 cp .env.example .env
